@@ -1,0 +1,25 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+android {
+    namespace 'com.laxmipriya.ludo'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.laxmipriya.ludo'
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName '0.2'
+        buildConfigField 'String', 'ADMOB_APP_ID', '"ca-app-pub-1239939527232812~6148887516"'
+        buildConfigField 'String', 'BANNER_ID_ONE', '"ca-app-pub-1239939527232812/7994332553"'
+        buildConfigField 'String', 'BANNER_ID_TWO', '"ca-app-pub-1239939527232812/7228045796"'
+        buildConfigField 'String', 'REWARDED_ID', '"ca-app-pub-1239939527232812/1045780821"'
+    }
+    buildFeatures {
+        buildConfig true
+    }
+}
+dependencies {
+    implementation 'com.google.android.libraries.ads.mobile.sdk:ads-mobile-sdk:1.7.0'
+}
